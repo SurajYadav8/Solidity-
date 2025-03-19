@@ -10,8 +10,9 @@ contract SimpleStorage {
         uint256 favoriteNumber;
         string name;
     }
+    mapping (string => uint256 ) public nametofavoriteNumber;
 
-    Person public Pat = Person(18, "Pat");
+    Person[] public community;
 
 
     uint256[] listOfFavoriteNumbers;
@@ -23,5 +24,10 @@ contract SimpleStorage {
 
     function retrieve() public view returns(uint256){
         return favoriteNumber;
+    }
+
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        community.push(Person( _favoriteNumber, _name));
+        nametofavoriteNumber[_name] = _favoriteNumber;
     }
 }
