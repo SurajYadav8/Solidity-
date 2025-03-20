@@ -6,8 +6,19 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "createSimpleStorageContract",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "addPerson",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -20,50 +31,63 @@
 						"type": "uint256"
 					}
 				],
-				"name": "listofSimpleStorageContract",
-				"outputs": [
-					{
-						"internalType": "contract SimpleStorage",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_simpleStorageIndex",
-						"type": "uint256"
-					}
-				],
-				"name": "sfGet",
+				"name": "community",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_simplestorageIndex",
+						"name": "favoriteNumber",
 						"type": "uint256"
 					},
 					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nametofavoriteNumber",
+				"outputs": [
+					{
 						"internalType": "uint256",
-						"name": "_newSimpleStorageNumber",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "sfStore",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -82,7 +106,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Storage Factory.sol": "StorageFactory"
+			"Add-Five.sol": "AddFiveStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -96,20 +120,20 @@
 		"remappings": []
 	},
 	"sources": {
+		"Add-Five.sol": {
+			"keccak256": "0x085f43e035f2ae470f75a16c8f333101f78ec5e1f30d4e734c26f97759ece903",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://28da0765b0fa7d7ddd170ce5f69fc514c6781e8cb2b1a1556a5c680e6cc811b4",
+				"dweb:/ipfs/QmXR1A9scMocCGjYjGqh4FfLaNJVY3g3JqeARkJn1RFjAh"
+			]
+		},
 		"Simple Storage.sol": {
 			"keccak256": "0xd0fdb03e4455ebf4c97f52eff552e06e449fd749d2e34ff9e8a3be9af938ebdb",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://891195fb0969e2c0194f923e5131be8632dfd240e3e015ab02c401c204c55b23",
 				"dweb:/ipfs/QmTLFf1mzq94XAnN7HYEgjMr48vLYd1x47Cn9SCPnWLf7y"
-			]
-		},
-		"Storage Factory.sol": {
-			"keccak256": "0x6239b094617c14e04a6ab91f1822012bd57a60dca2e782be7e7ebe6ba3ab83c7",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://8d503d7ed6acdc5acf24473d7eb2280b4abbf28638c8d352b55743417087174d",
-				"dweb:/ipfs/QmRd3DRJCw1m6aLpRjKtZYYUMnvmhdMoY3xHAqpLn3X2iJ"
 			]
 		}
 	},

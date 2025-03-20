@@ -7,9 +7,18 @@ import "./Simple Storage.sol";
 
 contract StorageFactory{
 
-    SimpleStorage public simpleStorage;
+    SimpleStorage[] public listofSimpleStorageContract;
     
      function createSimpleStorageContract() public {
-         simpleStorage = new SimpleStorage();
+         SimpleStorage newSimpleStorageContract = new SimpleStorage();
+         listofSimpleStorageContract.push(newSimpleStorageContract);
+     }
+
+     function sfStore(uint256 _simplestorageIndex, uint256 _newSimpleStorageNumber) public{
+        SimpleStorage mySimpleStorage = listofSimpleStorageContract[_simplestorageIndex];
+        mySimpleStorage.store(_newSimpleStorageNumber);
+     }
+     function sfGet(uint256 _simpleStorageIndex) public view returns(uint256) {
+        return listofSimpleStorageContract[_simpleStorageIndex].retrieve();
      }
 }

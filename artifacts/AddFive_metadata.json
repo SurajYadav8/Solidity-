@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Add-Five.sol": "AddFive"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Add-Five.sol": {
+			"keccak256": "0x739b873f295af1e8f2411ce88cae36d75eca4d696aee7fb0447f127ba1c20d86",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9eff3436576150d3d3acd155d2b68289abcd12b18959791c7f8d6ce53dce19e4",
+				"dweb:/ipfs/QmWM4hHMwExHASHm1vdaKwE63khcpKMcz7apiadtfg8Qis"
+			]
+		}
+	},
+	"version": 1
+}
