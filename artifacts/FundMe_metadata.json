@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.29+commit.ab55807c"
 	},
 	"language": "Solidity",
 	"output": {
@@ -32,7 +32,7 @@
 						"type": "address"
 					}
 				],
-				"name": "addressToAmountFunders",
+				"name": "addressToAmountFunded",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -94,11 +94,11 @@
 			]
 		},
 		"FundMe.sol": {
-			"keccak256": "0xf61182e5718276c78bd6f8d5049505ddccafac32fcb17a43eee86832123b93a4",
+			"keccak256": "0x183f84d852cf4b93a404794c9334fd538005aad5ef8d5a01d0592da2c6571cc6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a6b8199066d5fd5c3c449f95f089fbfccb52a2ecf628f124c86fdec641811fe1",
-				"dweb:/ipfs/QmSpMZRNZCMn4c6tZ9aRDGV2hwc1dbRjTpNkABLr8mGNsK"
+				"bzz-raw://741e909b8f5c1b9482356c48c3fa03c698326ad490a834d4d52e614eba9b1756",
+				"dweb:/ipfs/QmNp76m5fG38Nq4dnWGZppsTfbivgA85GYnGgCoZY2ryn3"
 			]
 		},
 		"PriceConverter.sol": {
