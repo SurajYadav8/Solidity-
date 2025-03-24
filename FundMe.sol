@@ -6,7 +6,7 @@
 pragma solidity ^0.8.18;
 
 import {PriceConverter} from "./PriceConverter.sol";
-error NotOwner();
+//error NotOwner();
 
 contract FundMe {
 
@@ -43,11 +43,11 @@ contract FundMe {
         Funders = new address[](0);
 
         //  this is the one way of sending token to different contract
-        payable(msg.sender).transfer(address(this).balance); // not that transfer method is used for upto 2300 gas fee anything above, it will return error
+        // payable(msg.sender).transfer(address(this).balance); // not that transfer method is used for upto 2300 gas fee anything above, it will return error
 
         // second way of sending ethers to different contract
-        bool sendSuccess = payable(msg.sender).send(address(this).balance);
-        require(sendSuccess, "send failed");
+        // bool sendSuccess = payable(msg.sender).send(address(this).balance);
+        // require(sendSuccess, "send failed");
 
 
         // Third way of sending ethers to different contract
@@ -58,9 +58,17 @@ contract FundMe {
     }
 
     modifier onlyOwner () {
-        // require(msg.sender == i_owner, "You're not the Owner");
-        if(msg.sender != i_owner) { revert NotOwner();}
+         require(msg.sender == i_owner, "You're not the Owner");
+        //if(msg.sender != i_owner) { revert NotOwner();}
         _;
+    }
+
+    receive() external payable { 
+        fund();
+    }
+
+    fallback() external payable{
+        fund();
     }
     
 }
