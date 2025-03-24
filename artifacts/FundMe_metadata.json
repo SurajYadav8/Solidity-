@@ -1,10 +1,20 @@
 {
 	"compiler": {
-		"version": "0.8.29+commit.ab55807c"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "NotOwner",
+				"type": "error"
+			},
 			{
 				"inputs": [
 					{
@@ -19,6 +29,19 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MINI_USD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -48,6 +71,19 @@
 				"name": "fund",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "i_owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -94,11 +130,11 @@
 			]
 		},
 		"FundMe.sol": {
-			"keccak256": "0x183f84d852cf4b93a404794c9334fd538005aad5ef8d5a01d0592da2c6571cc6",
+			"keccak256": "0xc262a474516045daea95388e36a838663a2a41ba38827ad2af7ffeee9d2fb73d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://741e909b8f5c1b9482356c48c3fa03c698326ad490a834d4d52e614eba9b1756",
-				"dweb:/ipfs/QmNp76m5fG38Nq4dnWGZppsTfbivgA85GYnGgCoZY2ryn3"
+				"bzz-raw://e04edae68ef4e93301342bd2558aa3bee1e3074f7ae630bcc4aece61ce2cedee",
+				"dweb:/ipfs/QmVvc55tXEUGBkVqdjWNbV4B6TTqLnd5bTSpZMAXvNgQ9q"
 			]
 		},
 		"PriceConverter.sol": {
