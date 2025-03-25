@@ -1,74 +1,78 @@
-//get funds from users
-//withdraw funds
-//set the minimum funding value in USD
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
+// Note: The AggregatorV3Interface might be at a different location than what was in the video!
+import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConverter.sol";
-//error NotOwner();
+
+error NotOwner();
 
 contract FundMe {
-
     using PriceConverter for uint256;
 
-    address[] public Funders;
-    mapping(address => uint256 ) public addressToAmountFunded;
-    
-    uint256 public constant MINI_USD = 5e18;
+    mapping(address => uint256) public addressToAmountFunded;
+    address[] public funders;
 
-    address public immutable i_owner;
+    // Could we make this constant?  /* hint: no! We should make it immutable! */
+    address public /* immutable */ i_owner;
+    uint256 public constant MINIMUM_USD = 5 * 10 ** 18;
 
-    constructor () {
+    constructor() {
         i_owner = msg.sender;
-    } 
+    }
 
     function fund() public payable {
-        require(msg.value.conversion() > MINI_USD, "didn't have enough amount");
-        Funders.push(msg.sender);
-        addressToAmountFunded[msg.sender]  +=  msg.value;
+        require(msg.value.getConversionRate() >= MINIMUM_USD, "You need to spend more ETH!");
+        // require(PriceConverter.getConversionRate(msg.value) >= MINIMUM_USD, "You need to spend more ETH!");
+        addressToAmountFunded[msg.sender] += msg.value;
+        funders.push(msg.sender);
     }
 
-    function withdraw() public onlyOwner {
-
-        // require(msg.sender == owner, "You're not the owner");
-
-        //for loop 
-        for(uint256 i = 0; i < Funders.length; i++){
-            address funder = Funders[i];
-            addressToAmountFunded[funder] = 0;
-        }
-
-        //reset the array
-        Funders = new address[](0);
-
-        //  this is the one way of sending token to different contract
-        // payable(msg.sender).transfer(address(this).balance); // not that transfer method is used for upto 2300 gas fee anything above, it will return error
-
-        // second way of sending ethers to different contract
-        // bool sendSuccess = payable(msg.sender).send(address(this).balance);
-        // require(sendSuccess, "send failed");
-
-
-        // Third way of sending ethers to different contract
-
-        (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
-        require(callSuccess, "call failed");
-
+    function getVersion() public view returns (uint256) {
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+        return priceFeed.version();
     }
 
-    modifier onlyOwner () {
-         require(msg.sender == i_owner, "You're not the Owner");
-        //if(msg.sender != i_owner) { revert NotOwner();}
+    modifier onlyOwner() {
+        // require(msg.sender == owner);
+        if (msg.sender != i_owner) revert NotOwner();
         _;
     }
 
-    receive() external payable { 
+    function withdraw() public onlyOwner {
+        for (uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++) {
+            address funder = funders[funderIndex];
+            addressToAmountFunded[funder] = 0;
+        }
+        funders = new address[](0);
+        // // transfer
+        // payable(msg.sender).transfer(address(this).balance);
+
+        // // send
+        // bool sendSuccess = payable(msg.sender).send(address(this).balance);
+        // require(sendSuccess, "Send failed");
+
+        // call
+        (bool callSuccess,) = payable(msg.sender).call{value: address(this).balance}("");
+        require(callSuccess, "Call failed");
+    }
+    // Explainer from: https://solidity-by-example.org/fallback/
+    // Ether is sent to contract
+    //      is msg.data empty?
+    //          /   \
+    //         yes  no
+    //         /     \
+    //    receive()?  fallback()
+    //     /   \
+    //   yes   no
+    //  /        \
+    //receive()  fallback()
+
+    fallback() external payable {
         fund();
     }
 
-    fallback() external payable{
+    receive() external payable {
         fund();
     }
-    
 }
