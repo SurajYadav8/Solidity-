@@ -1,0 +1,203 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "AFoundryCourseChallenge__CantBeZeroAddress",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "attribute",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "description",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "extraDescription",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "specialImage",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"AFoundryCourseChallenge.sol": "AFoundryCourseChallenge"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"AFoundryCourseChallenge.sol": {
+			"keccak256": "0xc68dcdca763b487ccfda1de761276d3eded928d7c7de18965e9125cd65032374",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://77f2354e8e4e49c28083caead511cd6ffa5d5f01e45f408567485e54f4069e66",
+				"dweb:/ipfs/QmeGVHsu8MxQAakU2qpioikcBRBsfRQU6bcSTQsknBtxjn"
+			]
+		},
+		"Context.sol": {
+			"keccak256": "0x2c36c9489879b7c91cdd73bbe8b2584f401aa26f4f252c04f053e824d6ca75c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ef20575fc12fd27f252acd28a8d0f65893832f29fd9c82f7ec165121af4572f",
+				"dweb:/ipfs/QmZMCoWWDTjhs1CNFMWv4JNWVyyeuzyqteCHhF4heCUYJJ"
+			]
+		},
+		"IFoundryCourseChallenge.sol": {
+			"keccak256": "0xecbff05108b2152969510aa94a0f0d081704e81263303751e8e90bc8654c34c8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://52820abdd6184844edb28c4561ef29b11a4df58b20bb60013c1efb1f71d8671b",
+				"dweb:/ipfs/QmbXFYgSS4aJFrh1piogJ23yMjHs6oQCSH1wVRMkxtv6tf"
+			]
+		},
+		"IFoundryCourseNft.sol": {
+			"keccak256": "0x681814591ce7c5b3ac59e548e1eaacb5aaead42b0b161339d0614a5d04f6e3f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://071a17f5e5299fe75169438319db8ae0399aafe9076ea4ab8ef5b3c1b0622c85",
+				"dweb:/ipfs/Qmbegs3WTvZjVcwDJuSdLeRtCNccVQdH5fDNY9WZP78Mgy"
+			]
+		},
+		"Ownable.sol": {
+			"keccak256": "0xc4fc5ac06766843233c30a647f104a1b376209699fed52752e18f0c14a860a4e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ee1c38d5cd61b5a2caa8e89e7fa6b3a27f9a65109b30c2bc74b85fb09fec9fef",
+				"dweb:/ipfs/QmXu64acLUV4iNsXBtHAoBZHs1jRq4fnYqHkYQmzitRirA"
+			]
+		}
+	},
+	"version": 1
+}

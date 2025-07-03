@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "challengeContract",
+						"type": "address"
+					}
+				],
+				"name": "addChallenge",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "twitterHandle",
+						"type": "string"
+					}
+				],
+				"name": "mintNft",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"IFoundryCourseNft.sol": "IFoundryCourseNft"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"IFoundryCourseNft.sol": {
+			"keccak256": "0x681814591ce7c5b3ac59e548e1eaacb5aaead42b0b161339d0614a5d04f6e3f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://071a17f5e5299fe75169438319db8ae0399aafe9076ea4ab8ef5b3c1b0622c85",
+				"dweb:/ipfs/Qmbegs3WTvZjVcwDJuSdLeRtCNccVQdH5fDNY9WZP78Mgy"
+			]
+		}
+	},
+	"version": 1
+}
