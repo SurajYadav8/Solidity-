@@ -6,6 +6,88 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "someAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "callTransferFunctionDirectly",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "someAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "callTransferFunctionDirectlySig",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "someAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "getDataToCallTransfer",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getselectorOne",
 				"outputs": [
@@ -91,11 +173,11 @@
 	},
 	"sources": {
 		"CallAnything.sol": {
-			"keccak256": "0xf2d948bea0749e73cd44cbc84ada489d182916c0cd533b13f24569a817440e23",
+			"keccak256": "0x545e088875041aeda10689d908f1e12747125bbf955b3351f00d53149bb4121b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://06fb2f4f06ff23105c0b8436891f4178ee6c2695a6a18ed52b7a23c28cebc82d",
-				"dweb:/ipfs/QmSUf2mUmT8LdPGALrJW3K3M1qLVzpTVkMgAn6ACwcJ3XQ"
+				"bzz-raw://d8db90012043334384e706105f5673b1054584269df6f3821460849d33ff9fe5",
+				"dweb:/ipfs/QmQnD4JzxT96vQKGU8YPuGBDZWQ2ZQ6vhGVJ122NSQfJ4c"
 			]
 		}
 	},
