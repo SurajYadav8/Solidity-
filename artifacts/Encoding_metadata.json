@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -130,7 +130,7 @@
 		"compilationTarget": {
 			"Encoding.sol": "Encoding"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -143,11 +143,11 @@
 	},
 	"sources": {
 		"Encoding.sol": {
-			"keccak256": "0xa22ea1ab60a4c9897eb7469a94c7238f94ba0e890d2b4b107c528ec8a6beb2f2",
+			"keccak256": "0x5eb7a275100bd148e83ca00c9c7e2935ea5c0e2faaaa9aa2e0bddae1e2d03570",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://63c6e7a2824293b0bec7814a2736c54f734b8e7136af7e284f765aa236dcfb70",
-				"dweb:/ipfs/QmdcvPPrTYrVipAvXMCijjfWhvkbtnjpkakPp2WcQjmpbc"
+				"bzz-raw://d5f979a52779660a1bc9e9b8311fe379e858b01a90fddf2e88fa4c214245ec7b",
+				"dweb:/ipfs/QmexxfYJ5hA3mjyPouPSmvy86DtSEieYx1Zk1At71CvjkH"
 			]
 		}
 	},

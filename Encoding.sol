@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.20;
+pragma solidity 0.8.18;
 
 contract Encoding{
 
@@ -41,4 +41,7 @@ contract Encoding{
         (string memory someString, string memory someOtherString) = abi.decode(multiEncode(), (string, string));
         return (someString, someOtherString);
     }
+
+    // How do we send transaction that call function with just the data field populated?
+    // How do we populate the data field?
 }
