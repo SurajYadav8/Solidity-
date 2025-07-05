@@ -6,6 +6,19 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"name": "callAnotherFunction",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -64,6 +77,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getDataToCallCallAnotherFunction",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -90,6 +116,19 @@
 			{
 				"inputs": [],
 				"name": "getselectorOne",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getselectorTwo",
 				"outputs": [
 					{
 						"internalType": "bytes4",
@@ -173,11 +212,11 @@
 	},
 	"sources": {
 		"CallAnything.sol": {
-			"keccak256": "0x545e088875041aeda10689d908f1e12747125bbf955b3351f00d53149bb4121b",
+			"keccak256": "0xce8f791894fba61524a0218e8d740ddcc34c5935ca82e2b779372fa88b521dac",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d8db90012043334384e706105f5673b1054584269df6f3821460849d33ff9fe5",
-				"dweb:/ipfs/QmQnD4JzxT96vQKGU8YPuGBDZWQ2ZQ6vhGVJ122NSQfJ4c"
+				"bzz-raw://78de203a0afd3692dcabb8388552631315a5e1f28aeb72b276cc425b95c73807",
+				"dweb:/ipfs/QmVmLPFiseeMnTKpWRdPwkhaj3VnHPTB9sZSWoy62GFNMf"
 			]
 		}
 	},

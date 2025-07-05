@@ -56,4 +56,17 @@ contract CallAnything {
         );
         return (bytes4(returnData), success);
     }
+
+    function callAnotherFunction() public view returns (bool) {}
+
+    function getselectorTwo() public pure returns (bytes4 selector) {
+        selector = bytes4(keccak256(bytes("callAnotherFunction()")));
+    }
+    function getDataToCallCallAnotherFunction()
+        public
+        pure
+        returns (bytes memory)
+    {
+       return abi.encodeWithSelector(getselectorTwo());
+    }
 }

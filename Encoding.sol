@@ -41,6 +41,7 @@ contract Encoding{
         (string memory someString, string memory someOtherString) = abi.decode(multiEncode(), (string, string));
         return (someString, someOtherString);
     }
+    
 
     // How do we send transaction that call function with just the data field populated?
     // How do we populate the data field?
